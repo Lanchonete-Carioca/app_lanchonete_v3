@@ -10,7 +10,7 @@ const productsService = require(
 );
 
 router.get("/", (req, res) => {
-  res.json(productsService.getAllProducts());
+  res.json(productsService.getProducts());
 });
 
 router.get("/:id", (req, res) => {
@@ -27,7 +27,6 @@ router.get("/:id", (req, res) => {
   res.json(product);
 });
 
-// Exemplo de rota protegida
 router.post(
   "/",
   authMiddleware,

@@ -1,11 +1,7 @@
 const express = require("express");
-
 const router = express.Router();
 
-<<<<<<< HEAD
-const authService = require(
-  "../services/auth.service"
-);
+const authService = require("../services/auth.service");
 
 router.post("/login", async (req, res) => {
   try {
@@ -22,12 +18,6 @@ router.post("/login", async (req, res) => {
       error: error.message
     });
   }
-=======
-router.post("/login", (req, res) => {
-  res.json({
-    message: "Login realizado com sucesso"
-  });
->>>>>>> 8b6f417d58e6c712089b0e8095fa1b647d18cb73
 });
 
 module.exports = router;

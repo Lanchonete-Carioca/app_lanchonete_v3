@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
@@ -45,30 +44,5 @@ async function login(email, password) {
 
 module.exports = {
   login
-=======
-const fs = require("fs");
-const path = require("path");
-
-const filePath = path.join(
-  __dirname,
-  "../data/users.json"
-);
-
-function getUsers() {
-  return JSON.parse(
-    fs.readFileSync(filePath, "utf8")
-  );
-}
-
-function saveUsers(users) {
-  fs.writeFileSync(
-    filePath,
-    JSON.stringify(users, null, 2)
-  );
-}
-
-module.exports = {
-  getUsers,
-  saveUsers
->>>>>>> 8b6f417d58e6c712089b0e8095fa1b647d18cb73
 };
+
